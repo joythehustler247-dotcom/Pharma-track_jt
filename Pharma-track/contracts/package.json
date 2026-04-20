@@ -1,4 +1,36 @@
 {
-  "name": "pharmatrack-contracts",
-  "version": "0.0.0"
+  "name": "veri-med-contracts",
+  "version": "1.0.0",
+  "description": "Veri-Med — PharmaTrack Smart Contracts",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy": "hardhat run scripts/deploy.ts --network amoy",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "seed": "hardhat run scripts/seed.ts --network amoy",
+    "seed:local": "hardhat run scripts/seed.ts --network localhost",
+    "verify": "hardhat verify --network amoy",
+    "node": "hardhat node",
+    "typecheck": "tsc --noEmit",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@types/node": "^20.14.0",
+    "hardhat": "^2.22.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.0",
+    "typescript": "^5.5.0",
+    "ts-node": "^10.9.0",
+    "dotenv": "^16.4.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "ethers": "^6.13.0",
+    "drizzle-orm": "^0.30.0",
+    "postgres": "^3.4.0",
+    "@paralleldrive/cuid2": "^2.2.2"
+  }
 }
